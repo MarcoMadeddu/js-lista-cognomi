@@ -2,23 +2,24 @@ console.log("java is done");
 
 //chiedere all'utente il cognome
 
-var cognome = prompt("Inserisci il tuo cognome con l'iniziale Maiuscola");
-var cognomi = ["Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
+var cognome = prompt("Inserisci il tuo cognome");
+var cognomi = ["Bianchi","Rossi","Duzioni","Balsano","Verdi"];
 
-console.log(cognome , cognomi);
+//inserire il cognome all'interno dell'array dopo aver fatto un controllo
 
-//inserire il cognome nel''array appena creato
+while(cognome == ''){
+  cognome = prompt("Inserisci correttamente");
+}
 
 cognomi.push(cognome);
+console.log("Ecco la prima versione della lista: " + cognomi);
 
-console.log(cognomi);
-
-//ordina alfabeticamente la Lista
+//stampa l'array in ordine alfabetico
 
 cognomi.sort();
-console.log(cognomi);
+console.log("Ecco la lista ordinata alfabeticamente: " + cognomi);
 
-//individua la posizione dell'elemento nell'array
+//mostra la posizione del cognome scelto
 
-var pos = (cognomi.indexOf(cognome) + 1);
-console.log(pos);
+var position= (cognomi.indexOf(cognome) +1);
+console.log("Il cognome: " + cognome + " è situato alla posizione: " + position);
